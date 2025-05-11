@@ -1,6 +1,120 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/* Base Styles (Mobile First) */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --text-color: #333;
+  --background-color: #fff;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: white;
+margin: 0;
+padding: 0;
+}
+
+.page-border {
+max-width: 800px;
+margin: 0 auto;
+border: 20px solid;
+border-image: url('checker.png') 30 round;
+padding: 20px;
+}
+
+header {
+background: #333;
+color: white;
+padding: 10px 20px;
+}
+
+header h1 {
+margin: 0;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav ul {
+display: flex;
+gap: 15px;
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+}
+
+.account-link {
+font-size: 0.9em;
+color: lightgray;
+}
+
+.intro {
+text-align: center;
+margin: 20px 0;
+}
+
+.delorean-showcase {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.features ul {
+list-style: none;
+padding: 0;
+}
+
+.features button {
+background-color: #00aaff;
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+}
+
+.info-columns {
+display: flex;
+justify-content: space-between;
+margin-top: 30px;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.upgrades, .reviews {
+flex: 1;
+}
+
+.upgrades ul, .reviews ul {
+list-style: none;
+padding: 0;
+}
+
+.upgrades li, .reviews li {
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+}
+
+.upgrades img {
+width: 30px;
+height: 30px;
+margin-right: 10px;
+}
+
+footer {
+text-align: center;
+margin-top: 40px;
+font-size: 0.8em;
+color: gray;
 }
