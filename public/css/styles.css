@@ -1,65 +1,88 @@
 /* Base Styles (Mobile First) */
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #e74c3c;
-  --light-color: #ecf0f1;
-  --dark-color: #2c3e50;
-  --text-color: #333;
-  --background-color: #fff;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-headline: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* colors */
+  --primary-color: #f0a868;
+  --secondary-color: #525b0f;
+  --tertiary-color: #8a470c;
+  --quaternary-color: #303030;
+  --quinary-color: #575751;
+  --light-grey: #d0d0d0;
+  --dark-grey: #303030;
+
+  /* sizes */
+  --font-base: 18px;
+  --small-font: 0.8em;
+  --large-font: 1.2em;
 }
 
-body {
+#wrapper {
 font-family: Arial, sans-serif;
-background: white;
+
+border-radius: 5px;
 margin: 0;
 padding: 0;
 }
 
-.page-border {
+body {
 max-width: 800px;
 margin: 0 auto;
-border: 20px solid;
-border-image: url('checker.png') 30 round;
+background-image: url('../images/site/small-checke.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+border: 8px solid var(--primary-color);
 padding: 20px;
 }
 
 header {
-background: #333;
-color: white;
-padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--quaternary-color);
+  margin-bottom: 4rem;
 }
 
 header h1 {
-margin: 0;
+  margin: 0;
 }
 
 nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav ul {
-display: flex;
-gap: 15px;
-list-style: none;
-padding: 0;
-margin: 0;
+nav .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
-color: white;
-text-decoration: none;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: var(--quaternary-color);
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .account-link {
 font-size: 0.9em;
-color: lightgray;
+color: var(--light-grey);
 }
 
 .intro {
-text-align: center;
-margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .delorean-showcase {
@@ -70,9 +93,14 @@ gap: 20px;
 flex-wrap: wrap;
 }
 
+.features {
+  background: rgba(255, 255, 255, 0.5);
+  color: #8a470c;
+
+}
 .features ul {
-list-style: none;
-padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .features button {
@@ -91,8 +119,16 @@ gap: 20px;
 flex-wrap: wrap;
 }
 
+.upgrade-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+/* .upgrade-list a{ 
+  font-size: 1rem;
+} */
 .upgrades, .reviews {
-flex: 1;
+  flex: 1;
 }
 
 .upgrades ul, .reviews ul {
@@ -107,8 +143,8 @@ align-items: center;
 }
 
 .upgrades img {
-width: 30px;
-height: 30px;
+width: 70px;
+height: 70px;
 margin-right: 10px;
 }
 
