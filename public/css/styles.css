@@ -150,7 +150,7 @@ nav {
   text-align: center;
   gap: 10px;
 }
-.upgrade-list div{ 
+.upgrade-list div { 
   background: rgba(192, 192, 8, 0.4);
   padding: 8px;
 } 
@@ -173,6 +173,7 @@ nav {
 .upgrades img {
   width: 60px;
   height: 60px;
+  margin-left: 50px;
 }
 
 footer p {
@@ -189,8 +190,11 @@ footer {
 
 /* For tablets and below (768px) */
 @media (max-width: 768px) {
-
-
+body {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+}
 .delorean-showcase {
 flex-direction: column;
 text-align: center;
@@ -201,10 +205,17 @@ flex-direction: column;
 }
 
 .upgrades ul {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
 gap: 10px;
+}
+.upgrades div {
+  padding: 10px 8px;
+}
+.upgrades img {
+  width: 80px;
+  height: 80px;
+  text-align: center;
 }
 
 .upgrades li {
@@ -219,7 +230,11 @@ width: 45%;
 @media (max-width: 320px) {
 
 body{
+  max-width: 800px;
   border: none;
+}
+header {
+width: 100%;
 }
 header h1 {
 font-size: 1.5em;
@@ -228,7 +243,9 @@ font-size: 1.5em;
 .account-link {
 font-size: 0.8em;
 }
-
+.intro img {
+  width: 0%;
+}
 .features ul li {
 font-size: 0.9em;
 }
