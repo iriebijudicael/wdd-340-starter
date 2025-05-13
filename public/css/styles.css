@@ -55,7 +55,7 @@ header h1 {
 }
 
 /* Navigation Styles */
-nav {
+#navbar {
   display: flex;
   justify-content: center; 
   width: 100%;
@@ -72,7 +72,7 @@ nav {
   padding: 0;
   margin: 0;
   max-width: 100%;
-  flex-wrap: wrap; 
+  
 }
 
 .nav-list li {
@@ -80,7 +80,7 @@ nav {
 }
 
 .nav-list a {
-  display: block;
+  display: flex;
   padding: 0.5rem 1rem;
   color: var(--quaternary-color);
   text-decoration: none;
@@ -102,7 +102,7 @@ nav {
   color: var(--light-grey);
 }
 
-.intro {
+#intro {
   text-align: center;
   margin: 20px 0;
 }
@@ -191,7 +191,7 @@ footer {
 /* For tablets and below (768px) */
 @media (max-width: 768px) {
 body {
-  padding: 10px;
+  padding: 2vw 3vw 0 3vw;
   margin: 10px;
   border: none;
 }
@@ -210,12 +210,12 @@ grid-template-columns: repeat(2, 1fr);
 gap: 10px;
 }
 .upgrades div {
-  padding: 10px 8px;
+  padding: 10px 5px;
 }
 .upgrades img {
   width: 80px;
   height: 80px;
-  text-align: center;
+  margin-left: 10rem;
 }
 
 .upgrades li {
@@ -229,23 +229,22 @@ width: 45%;
 /* For phones and very small screens (360px and below) */
 @media (max-width: 320px) {
 
-body{
-  max-width: 800px;
-  border: none;
+body {
+  padding: 0 1vw 0 1vw;
 }
 header {
-width: 100%;
+padding: 0 auto;
 }
 header h1 {
 font-size: 1.5em;
 }
-
+.nav ul {
+width: 100%;
+}
 .account-link {
 font-size: 0.8em;
 }
-.intro img {
-  width: 0%;
-}
+
 .features ul li {
 font-size: 0.9em;
 }
