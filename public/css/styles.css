@@ -117,7 +117,14 @@ header h1 {
   gap: 20px;
   flex-wrap: wrap;
 }
-
+.img-case {
+  position: relative;
+  top: 0;
+  right: 80px;
+  max-width: 600px;
+  height: auto;
+  border-radius: 5px;
+}
 .features {
   background: rgba(192, 192, 8, 0.4);
   color: var(--tertiary-color);
@@ -125,6 +132,7 @@ header h1 {
   border-radius: 5px;
   border: 2px solid var(--primary-color);
   margin: 18px 0;
+  z-index: 1;
 }
 .features ul {
   list-style: none;
@@ -194,7 +202,11 @@ footer {
 /* For tablets and below (768px) */
 @media (max-width: 768px) {
 body {
-  padding: 2vw 3vw 0 3vw;
+  padding: auto;
+  background-image: none;
+}
+#wrapper {
+  max-width: 800px;
   margin: 10px;
   border: none;
 }
