@@ -17,18 +17,21 @@
   --large-font: 1.2em;
 }
 
-#wrapper {
-font-family: Arial, sans-serif;
-border-radius: 5px;
-margin: 0;
-padding: 0;
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../images/site/small_check.jpg');
+  border-radius: 5px;
+  margin: 0;
+  padding: 1vw 5vw 1vw 5vw;
 }
 
-body {
-max-width: 800px;
-margin: 0 auto;
-border: 8px solid var(--primary-color);
-padding: 20px;
+#wrapper {
+  max-width: 800px;
+  background: #FFFFFF;
+  margin: 0 auto;
+  border: 8px solid var(--primary-color);
+  padding: 20px;
 }
 
 header {
@@ -80,7 +83,7 @@ header h1 {
 }
 
 .nav-list a {
-  display: flex;
+  display: block;
   padding: 0.5rem 1rem;
   color: var(--quaternary-color);
   text-decoration: none;
@@ -110,18 +113,18 @@ header h1 {
 .delorean-showcase {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
 .features {
   background: rgba(192, 192, 8, 0.4);
-  color: #8a470c;
-  padding: 50px;
+  color: var(--tertiary-color);
+  padding: 30px;
   border-radius: 5px;
   border: 2px solid var(--primary-color);
-  margin: 20px 0;
+  margin: 18px 0;
 }
 .features ul {
   list-style: none;
@@ -171,8 +174,8 @@ header h1 {
 }
 
 .upgrades img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-left: 50px;
 }
 
