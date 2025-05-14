@@ -10,6 +10,7 @@
   --quinary-color: #575751;
   --light-grey: #d0d0d0;
   --dark-grey: #303030;
+  
 
   /* sizes */
   --font-base: 18px;
@@ -52,10 +53,6 @@ header a {
   text-decoration: none;
   margin: 0;
 }
-header h1 {
-  font-family: 'Trebuchet MS', sans-serif;
-  margin: 0;
-}
 
 /* Navigation Styles */
 #navbar {
@@ -74,6 +71,7 @@ header h1 {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
   max-width: 100%;
   
 }
@@ -108,6 +106,16 @@ header h1 {
 #intro {
   text-align: center;
   margin: 20px 0;
+}
+#intro h2 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2rem;
+  text-align: start;
+  margin: 20px 0;
+}
+section h3 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
 }
 
 .delorean-showcase {
@@ -202,17 +210,29 @@ footer {
 /* For tablets and below (768px) */
 @media (max-width: 768px) {
 body {
-  padding: auto;
+  padding: 1vw 2vw 1vw 2vw;
   background-image: none;
 }
 #wrapper {
-  max-width: 800px;
+  max-width: 768px;
   margin: 10px;
   border: none;
 }
-.delorean-showcase {
-flex-direction: column;
-text-align: center;
+
+.img-case {
+  position: relative;
+  top: 0;
+  right: 90px;
+  max-width: 300px;
+}
+.features {
+  background: rgba(192, 192, 8, 0.4);
+  color: var(--tertiary-color);
+  padding: 30px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  margin: 18px 0;
+  z-index: 1;
 }
 
 .info-columns {
@@ -241,34 +261,59 @@ width: 45%;
 }
 }
 
-/* For phones and very small screens (360px and below) */
+
+/* For tablets and below (320px) */
 @media (max-width: 320px) {
-
 body {
-  padding: 0 1vw 0 1vw;
+  padding: 1vw 2vw 1vw 2vw;
+  background-image: none;
 }
-header {
-padding: 0 auto;
-}
-header h1 {
-font-size: 1.5em;
-}
-.nav ul {
-width: 100%;
-}
-.account-link {
-font-size: 0.8em;
+#wrapper {
+  max-width: 440px;
+  margin: 10px;
+  border: none;
 }
 
-.features ul li {
-font-size: 0.9em;
+.img-case {
+  
+  top: 0;
+  right: 90px;
+  max-width: 300px;
+}
+.features {
+  background: rgba(192, 192, 8, 0.4);
+  color: var(--tertiary-color);
+  
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  margin: 18px 0;
+  z-index: 1;
 }
 
-.features button {
-width: 100%;
+.info-columns {
+flex-direction: column;
+}
+
+.upgrades ul {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+}
+.upgrades div {
+  padding: 10px auto;
+}
+.upgrades img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10rem;
 }
 
 .upgrades li {
-width: 100%;
+flex-direction: column;
+align-items: center;
+text-align: center;
+width: 45%;
 }
 }
+
+
