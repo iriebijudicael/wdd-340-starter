@@ -128,15 +128,15 @@ section h3 {
 .img-case {
   position: relative;
   top: 0;
-  right: 95px;
-  max-width: 580px;
+  right: 80px;
+  max-width: 600px;
   height: auto;
   border-radius: 5px;
 }
 .features {
   background: rgba(192, 192, 8, 0.4);
   color: var(--tertiary-color);
-  padding: 28px;
+  padding: 30px;
   border-radius: 5px;
   border: 2px solid var(--primary-color);
   margin: 18px 0;
