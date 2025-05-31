@@ -136,7 +136,7 @@ section h3 {
 .features {
   background: rgba(192, 192, 8, 0.4);
   color: var(--tertiary-color);
-  padding: 30px;
+  padding: 28px;
   border-radius: 5px;
   border: 2px solid var(--primary-color);
   margin: 18px 0;
