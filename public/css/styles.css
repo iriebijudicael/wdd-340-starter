@@ -28,7 +28,7 @@ body {
 }
 
 #wrapper {
-  max-width: 800px;
+  max-width: 900px;
   background: #FFFFFF;
   margin: 0 auto;
   border: 8px solid var(--primary-color);
@@ -44,7 +44,7 @@ header {
 }
 
 header .siteName a{
-  font-size: 2rem;
+  font-size: clamp(1.5rem,4vw + 1rem, 4rem);
   font-weight: 600;
   color: var(--quinary-color);
 }
@@ -73,7 +73,6 @@ header a {
   margin: 0;
   flex-wrap: wrap;
   max-width: 100%;
-  
 }
 
 .nav-list li {
@@ -209,112 +208,145 @@ footer {
 
 
 /* For tablets and below (768px) */
+/* ===== Small Screen (Mobile) ===== */
 @media (max-width: 768px) {
-body {
-  padding: 1vw 2vw 1vw 2vw;
-  background-image: none;
-}
-#wrapper {
-  max-width: 768px;
-  margin: 10px;
-  border: none;
+
+  body {
+    background-image: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+  }
+
+  #wrapper {
+    max-width: 100%;
+    padding: 10px;
+    border: none;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  header .siteName a {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .account-link {
+    font-size: 0.8rem;
+  }
+
+  /* NAVIGATION */
+  #navbar {
+    background-color: var(--primary-color)
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .nav-list a {
+    font-weight: 600;
+    color: var(--quaternary-color);
+    padding: 0.1rem;
+    font-size: 0.8rem;
+  }
+
+  /* INTRO SECTION */
+  #intro {
+    width: 100%;
+    padding: 0;
+  }
+  #intro h1 {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  /* HERO / DELOREAN */
+  .delorean-showcase {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+  }
+
+  .img-case {
+    position: relative;
+    top: 0;
+    right: 30px;
+    width: 100%;
+    height: 20vh;
+    margin: 2px;
+  }
+
+  .features {
+    width: 100%;
+    background: rgba(192, 192, 8, 0.4);
+    padding: 0 10px;
+    margin: 3px;
+    font-size: 0.85rem;
+  }
+  .features h2 {
+    font-size: 0.85rem;
+  }
+
+  .features button {
+    padding: 6px;
+    margin-top: 10px;
+  }
+
+  /* INFO SECTIONS */
+  .info-columns {
+    font-size: 0.85rem;
+    flex-direction: column-reverse;
+  }
+  .info-columns h3 {
+    font-weight: 600;
+  }
+
+  /* REVIEWS */
+  .reviews ul {
+    padding-left: 15px;
+  }
+
+  .reviews li {
+    line-height: 1.4rem;
+    font-size: 0.85rem;
+  }
+
+  /* UPGRADES GRID */
+  .upgrade-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .upgrade-list div {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .upgrades img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 5px auto;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
 }
 
-.img-case {
-  position: relative;
-  top: 0;
-  right: 90px;
-  max-width: 300px;
-}
-.features {
-  background: rgba(192, 192, 8, 0.4);
-  color: var(--tertiary-color);
-  padding: 30px;
-  border-radius: 5px;
-  border: 2px solid var(--primary-color);
-  margin: 18px 0;
-  z-index: 1;
-}
-
-.info-columns {
-flex-direction: column;
-}
-
-.upgrades ul {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 10px;
-}
-.upgrades div {
-  padding: 10px 5px;
-}
-.upgrades img {
-  width: 80px;
-  height: 80px;
-  margin-left: 10rem;
-}
-
-.upgrades li {
-flex-direction: column;
-align-items: center;
-text-align: center;
-width: 45%;
-}
-}
-
-
-/* For tablets and below (320px) */
-@media (max-width: 320px) {
-body {
-  padding: 1vw 2vw 1vw 2vw;
-  background-image: none;
-}
-#wrapper {
-  max-width: 440px;
-  margin: 10px;
-  border: none;
-}
-
-.img-case {
-  
-  top: 0;
-  right: 90px;
-  max-width: 300px;
-}
-.features {
-  background: rgba(192, 192, 8, 0.4);
-  color: var(--tertiary-color);
-  
-  border-radius: 5px;
-  border: 2px solid var(--primary-color);
-  margin: 18px 0;
-  z-index: 1;
-}
-
-.info-columns {
-flex-direction: column;
-}
-
-.upgrades ul {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 10px;
-}
-.upgrades div {
-  padding: 10px auto;
-}
-.upgrades img {
-  width: 40px;
-  height: 40px;
-  margin-left: 10rem;
-}
-
-.upgrades li {
-flex-direction: column;
-align-items: center;
-text-align: center;
-width: 45%;
-}
-}
 
 
