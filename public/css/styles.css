@@ -6,7 +6,7 @@
   --primary-color: #f0a868;
   --secondary-color: #525b0f;
   --tertiary-color: #8a470c;
-  --quaternary-color: #303030;
+  --quaternary-color: #000000;
   --quinary-color: #575751;
   --light-grey: #d0d0d0;
   --dark-grey: #303030;
@@ -133,7 +133,7 @@ section h2 {
 }
 .features {
   background: rgba(192, 192, 8, 0.4);
-  color: var(--tertiary-color);
+  color: var(--quaternary-color);
   padding: 30px;
   border-radius: 5px;
   border: 2px solid var(--primary-color);
@@ -256,7 +256,6 @@ footer {
 
   .nav-list a {
     font-weight: 600;
-    color: var(--quaternary-color);
     padding: 0.1rem;
     font-size: 0.8rem;
   }
