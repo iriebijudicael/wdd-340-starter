@@ -1,3 +1,3 @@
-INSERT INTO classification ()
+INSERT INTO classification ()           
 VALUES
 );
