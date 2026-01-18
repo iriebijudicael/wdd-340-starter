@@ -27,13 +27,19 @@ app.set("/css", express.static(__dirname + "public/css")) // not at views root
  *************************/
 app.use(static)
 
+// router.get("/", function(req, res){
+//   res.render("index", { title: "Home" })
+// });
+// router.get("/", function(req, res){
+//   res.render("index2", { title: "Custom" })
+// });
 
 /* ***********************
  * Index Route
  *************************/
 app.get("/", function(req, res){
   res.render("index", { title: "Home" })
-})
+});
 
 /* ***********************
  * Local Server Information

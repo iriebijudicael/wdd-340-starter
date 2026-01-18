@@ -6,11 +6,12 @@
                     "rejectUnauthorized": true
                 }
             },
+            "ssh": "Disabled",
             "previewLimit": 50,
             "server": "localhost",
             "driver": "PostgreSQL",
-            "name": "cse-340db",
-            "connectString": "postgresql://cse340:YrTMBLEnpxxrgPkb6Qmxxf4n1XCaOXwq@dpg-d0fq7pk9c44c73bitu1g-a.frankfurt-postgres.render.com/cse340_12q5"
+            "name": "cse340_db",
+            "connectString": "postgresql://cse340_db:JaIFIFjNlRwBh4I9kZeiFExjzBrjxbVf@dpg-d5jslmkoud1c73fiq5u0-a.frankfurt-postgres.render.com/cse340_db_l5bu"
         }
     ]
 }
