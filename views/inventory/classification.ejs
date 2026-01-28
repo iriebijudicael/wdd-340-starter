@@ -1,0 +1,16 @@
+<% if (title) { %>
+<h1><%= title %></h1>
+<% } else {
+  res.redirect('/')
+} %>
+
+<%# messages() %>
+
+
+<!-- Make sure you include /inv/ before /detail/ -->
+<a href="/inv/detail/<%= row.inv_id %>">
+    <%= row.inv_make %> <%= row.inv_model %>
+</a>
+
+
+<%- grid %>
