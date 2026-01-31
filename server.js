@@ -25,7 +25,7 @@ const pool = require('./database/');
 app.set("view engine", "ejs");
 app.use(expressLayouts);
 app.set("layout", "./layouts/layout"); // not at views root
-app.set("/css", express.static(__dirname + "public/css")) // not at views root
+app.use(express.static("public"));
 
 /* ***********************
  * Routes
