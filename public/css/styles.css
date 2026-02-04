@@ -318,14 +318,13 @@ section dl {
 
 /* Week 4 */
 .notice {
-  color: rgb(184, 194, 0);
+  font-weight: 600;
+  color: rgb(194, 158, 0);
   list-style: none;
-  background-color: rgba(0, 0, 0, 0.747);
   padding: .5rem;
-  border-radius: 3px;
 }
 .notice li::before {
-  content: "> ";
+  content: ">>";
 }
 
 /* Login form  */
@@ -393,7 +392,7 @@ section dl {
     max-width: 700px;
     border: 4px solid var(--secondary-bg);
     border-radius: .5rem;
-    /* padding: .5rem; */
+    padding: .9rem;
   }
   #content {
     display: grid;
