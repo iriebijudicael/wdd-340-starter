@@ -18,6 +18,7 @@ const accountRoute = require('./routes/accountRoute.js');
 
 const utilities = require("./utilities/");
 const session = require("express-session");
+const bodyParser = require("body-parser");
 const pool = require('./database/');
 
 
@@ -45,6 +46,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ // for parsing application/x-www-form-urlencoded
+  extended: true
+}));
 
 
 /* ***********************
@@ -69,7 +74,7 @@ app.get("/", utilities.handleErrors(baseController.buildHome));
 // Inventory routes
 app.use("/inv", inventoryRoute);
 // Account routes
-app.use("/account", accountRoute);
+app.use("/account", require("./routes/accountRoute"));
 
 app.use(async (req, res, next) => {
   next({status: 404, message: 'Sorry, we appear to have lost that page.'})
